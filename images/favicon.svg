@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="${size}px" height="${size}px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" height="${size}px" width="${size}px">
+  <style>
+    svg {color: black}
+    @media (prefers-color-scheme: dark) {
+      svg { color: white }
+    }
+    .outline {fill:transparent;stroke:currentColor;}
+    text {font-family: "Verdana", sans-serif; font-size: 18px;font-weight:900}
+  </style>
+<g fill="none" stroke="currentColor" stroke-width="1.2" transform="translate(10 -5) scale(4 4)">
+  <path d="M14.5 19.5V12.5M10.5 12.5V5.5M5.5 12.5H19.5M5.5 19.5H19.5V5.5H5.5V19.5Z">
+  </path>
+  </g>
+  <text alignment-baseline="middle" text-anchor="middle" x="60" y="85">no code</text>
+  
+  <text alignment-baseline="middle" text-anchor="middle" x="60" y="100">dashboard</text>
+  <rect x="2" y="2" width="116" height="116" fill="none" stroke="currentColor" stroke-width="1"></rect>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>
