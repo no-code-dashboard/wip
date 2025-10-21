@@ -1,0 +1,33 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+:where(html) {
+  --brand-font-family: "Trebuchet MS", system-ui, -apple-system, Segoe UI,
+    Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+
+  --color-brand: #0939aaff;
+  --color-blue: #0d0df2ff;
+  --color-red: #f20d0dff;
+  --color-amber: #f2a10dff;
+  --color-green: #0ac20aff;
+  --color-90-90: #aa098aff;
+  --color-90-180: #aa7a09ff;
+  --color-90-270: #09aa2aff;
+  --color-120-120: #aa0939ff;
+  --color-120-240: #39aa09ff;
+
+  --brand: var(--color-brand);
+
+  --color-green-amber: color-mix(
+    in lch,
+    var(--color-green),
+    var(--color-amber)
+  );
+  --color-amber-red: color-mix(in lch, var(--color-amber), var(--color-red));
+
+  --chart-footer: "No-code-dashboard";
+}

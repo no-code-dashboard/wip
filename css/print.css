@@ -1,0 +1,66 @@
+@media print {
+  /* @page {
+        margin: 2cm;
+        & :first {
+            margin-top: auto;
+        }
+    } */
+  /* @page {
+        size: landscape;
+        margin: 10%;
+
+        @bottom-center {
+            content: "Page " counter(page) " of " counter(pages);
+        }
+    }
+
+    @page: left {
+        @bottom-left {
+            content: "Page " counter(page) " of " counter(pages);
+        }
+    } */
+
+  .only-print {
+    visibility: visible;
+    display: block;
+  }
+
+  .page-break {
+    display: block;
+    page-break-before: always;
+  }
+
+  .chart-container {
+    display: block;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 0.5rem;
+  }
+
+  .chart {
+    border: 1px solid gray;
+    padding: 1rem;
+    /* height: 100%; */
+    /* width: 400px;  */
+    /* max-height: 15cm; */
+    page-break-after: always;
+    /* break-inside: avoid-page;
+        break-before: auto; */
+    /* scale: "90%"; */
+  }
+
+  .small .medium .large {
+    grid-column: span 1;
+  }
+
+  button,
+  .noPrint {
+    visibility: hidden;
+    display: none;
+  }
+
+  .onlyPrint {
+    visibility: visible;
+    display: block;
+  }
+}

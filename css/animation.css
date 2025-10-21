@@ -1,0 +1,24 @@
+.flash-border {
+  animation: fade-out-shadow 1.5s ease-out forwards;
+}
+@keyframes fade-out-shadow {
+  from {
+    box-shadow: 0 0 20px 10px var(--color-brand);
+  }
+  to {
+    box-shadow: 0 0 0 0 var(--color-brand);
+  }
+}
+
+.flash-border path {
+  --path-length: 1000px;
+  stroke-dasharray: var(--path-length);
+  stroke-dashoffset: var(--path-length);
+  animation: draw-path 3s linear forwards;
+}
+
+@keyframes draw-path {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

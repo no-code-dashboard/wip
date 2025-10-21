@@ -1,0 +1,97 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+.dialog[open] {
+  -webkit-animation: var(--animation-slide-in-up) forwards;
+  animation: var(--animation-slide-in-up) forwards;
+  /* input:disabled,
+  textarea:disabled,
+  select:disabled,
+  button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  } */
+  /*open prop overrride*/
+  select {
+    field-sizing: fixed;
+  }
+  input[type="text"] {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+  .hide {
+    display: none;
+  }
+  .dim {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  textarea {
+    width: 100%;
+  }
+
+  &.medium {
+    width: 600px;
+  }
+  &.small {
+    -ms-flex-line-pack: center;
+    align-content: center;
+    button {
+      width: 100%;
+      display: block;
+    }
+  }
+  button {
+    margin: 0.25rem;
+  }
+
+  & label::after {
+    content: ":";
+    padding-right: 1em;
+  }
+
+  & p {
+    padding: 0.3rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  & legend {
+    font-weight: 700;
+  }
+  & :where(input[type="checkbox"]) {
+    margin-right: 0.5rem;
+  }
+
+  & .error-message {
+    color: var(--color-red);
+  }
+  & .error {
+    background: hsl(from var(--color-red) h s l / 0.3);
+  }
+  & hr {
+    margin: 0.5rem;
+  }
+  & .legend-main {
+    font-size: larger;
+  }
+  & .date-select {
+    & input[type="date"],
+    & select {
+      width: 2rem;
+      color: white;
+    }
+  }
+  & details:has(.error) > summary {
+    color: var(--color-red);
+  }
+}
