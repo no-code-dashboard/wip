@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>No-code-dashboard</title>
+    <!-- <meta name="No-code-dashboard" content="Dashboard from data in file" /> -->
+    <meta
+      name="description"
+      content="A web app that creates a dashboard automatically. 
+    The dashboard can be easily edited via simple UI."
+    />
+    <meta
+      name="keywords"
+      content="Dashboard, Metrics, Project, Program, Governance"
+    />
+    <meta name="author" content="Abhijit Majumdar" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- created using https://realfavicongenerator.net/ -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="./images/site.webmanifest" />
+
+    <!-- the props -->
+    <link rel="stylesheet" href="https://unpkg.com/open-props" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/open-props/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/open-props/buttons.min.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="node_modules/modern-normalize/modern-normalize.css"
+    /> -->
+
+    <link rel="stylesheet" href="./css/brand.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/dialog.css" />
+    <link rel="stylesheet" href="./css/animation.css" />
+    <link rel="stylesheet" href="./css/markdown.css" />
+
+    <link rel="stylesheet" href="./css/print.css" />
+
+    <script src="./js/main.js" type="module" charset="utf-8" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
+  </head>
+
+  <body>
+    <input type="file" id="file" style="display: none" />
+    <nav id="top-nav">
+      <button id="show-toc" style="display: none" class="menu">Content</button>
+      <span id="not-preset">
+        <button id="load-data" class="menu">Load Data</button>
+        <button id="configure-dashboard" style="display: none" ,class="menu">
+          Configure Dashboard
+        </button>
+        <button id="download-config" style="display: none" class="menu">
+          Download Config
+        </button>
+        <button id="upload-config" style="display: none" class="menu">
+          Upload Config
+        </button>
+      </span>
+      <span id="preset"></span>
+      <span id="common">
+        <button id="print" style="display: none" class="menu">Print</button>
+      </span>
+      <div id="dropdown-toc" style="display: none"></div>
+    </nav>
+    <br />
+    <div id="loader-wrapper">
+      <progress style="width: 100%; visibility: hidden"></progress>
+    </div>
+    <main>
+      <section>
+        <div id="report-titles">
+          <h1 id="main-title"></h1>
+          <h2 id="sub-title"></h2>
+        </div>
+        <div class="page-break"></div>
+        <div class="only-print">
+          <h2>Table of Content</h2>
+          <br />
+          <div id="toc"></div>
+        </div>
+      </section>
+      <br />
+      <section class="callout-container"></section>
+      <section class="chart-container"></section>
+      <section>
+        <div id="data-source" class="tags"></div>
+        <div id="log" class="tags"></div>
+      </section>
+      <section>
+        <footer>
+          <hr style="margin: 0.5rem" />
+          <a href="index.html">
+            <img src="ncd.svg" width="50px" alt="no code dashboard" />
+          </a>
+          <p>&copy; 2025</p>
+          <p>
+            Powered by
+            <a href="https://www.w3schools.com" target="_blank"
+              >HTML5, CSS3, JS,</a
+            >
+            <a href="https://www.papaparse.com" target="_blank">Papaparse, </a>
+            <a href="https://observablehq.com/plot/" target="_blank"
+              >Observable Plot,</a
+            >
+            <a href="https://open-props.style" target="_blank">Open Prop,</a>
+            <span> and a lot of elbow grease</span>
+          </p>
+          <p>
+            See: <a href="index.html?demo" target="_blank">demo</a>,
+            <a href="help.html" target="_blank">help</a>
+          </p>
+          <p>
+            <a
+              href="mailto:abhijit.majumdar@no-code-dashboard.com?&subject=Feedback on no-code-dashboard"
+              target="_blank"
+              >Send your feedback</a
+            >
+          </p>
+        </footer>
+      </section>
+      <button class="menu" id="smoke-test">Smoke test</button>
+    </main>
+  </body>
+</html>
